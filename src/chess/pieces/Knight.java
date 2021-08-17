@@ -8,16 +8,6 @@ public class Knight extends Piece {
     private static Knight whiteKnight = new Knight(Color.WHITE);
     private static Knight blackKnight = new Knight(Color.BLACK);
 
-    private static int[] table = {
-            -50,-40,-30,-30,-30,-30,-40,-50,
-            -40,-20,  0,  0,  0,  0,-20,-40,
-            -30,  0, 10, 15, 15, 10,  0,-30,
-            -30,  5, 15, 20, 20, 15,  5,-30,
-            -30,  0, 15, 20, 20, 15,  0,-30,
-            -30,  5, 10, 15, 15, 10,  5,-30,
-            -40,-20,  0,  5,  5,  0,-20,-40,
-            -50,-40,-30,-30,-30,-30,-40,-50,};
-
     private Knight(Color color) {
         super(color);
     }
@@ -46,11 +36,8 @@ public class Knight extends Piece {
     }
 
     @Override
-    public int value(int x, int y, boolean midGame) {
-        if (this.color == Color.WHITE)
-            return 30*table[8*y+x];
-        else
-            return 30*table[8*(7-y)+x];
+    public int value() {
+        return 0;
     }
 
     public String toString() {

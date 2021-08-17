@@ -14,7 +14,7 @@ public abstract class Piece {
     public abstract ArrayList<Tile> possibleMoves(Board board,
                                                   int x, int y);
 
-    public abstract int value(int x, int y, boolean midGame);
+    public abstract int value();
 
     public abstract Piece clone();
 

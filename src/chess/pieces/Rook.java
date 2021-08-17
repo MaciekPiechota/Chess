@@ -8,16 +8,6 @@ public class Rook extends Piece {
     private static Rook whiteRook = new Rook(Color.WHITE);
     private static Rook blackRook = new Rook(Color.BLACK);
 
-    private static int[] table = {
-            -20,-10,-10,-10,-10,-10,-10,-20,
-            -10,  0,  0,  0,  0,  0,  0,-10,
-            -10,  0,  5, 10, 10,  5,  0,-10,
-            -10,  5,  5, 10, 10,  5,  5,-10,
-            -10,  0, 10, 10, 10, 10,  0,-10,
-            -10, 10, 10, 10, 10, 10, 10,-10,
-            -10,  5,  0,  0,  0,  0,  5,-10,
-            -20,-10,-10,-10,-10,-10,-10,-20,};
-
     private Rook(Color color) {
         super(color);
     }
@@ -45,10 +35,8 @@ public class Rook extends Piece {
     }
 
     @Override
-    public int value(int x, int y, boolean midGame) {
-        if (this.color == Color.WHITE)
-            return 50*table[y*8+x];
-        return 50*table[(7-y)*8+x];
+    public int value() {
+        return 0;
     }
 
     public String toString() {

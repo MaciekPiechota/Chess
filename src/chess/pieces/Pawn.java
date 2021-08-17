@@ -8,16 +8,6 @@ public class Pawn extends Piece {
     private static Pawn whitePawn = new Pawn(Color.WHITE);
     private static Pawn blackPawn = new Pawn(Color.BLACK);
 
-    private static int[][] table = {
-            {0,  0,  0,  0,  0,  0,  0,  0},
-            {50, 50, 50, 50, 50, 50, 50, 50},
-            {10, 10, 20, 30, 30, 20, 10, 10},
-            {5,  5, 10, 25, 25, 10,  5,  5},
-            {0,  0,  0, 20, 20,  0,  0,  0},
-            {5, -5,-10,  0,  0,-10, -5,  5},
-            {5, 10, 10,-20,-20, 10, 10,  5},
-            {0,  0,  0,  0,  0,  0,  0,  0}};
-
     private Pawn(Color color) {
         super(color);
     }
@@ -67,10 +57,8 @@ public class Pawn extends Piece {
     }
 
     @Override
-    public int value(int x, int y, boolean midGame) {
-        if (this.color == Color.WHITE)
-            return 10*table[x][y];
-        return 10*table[x][7-y];
+    public int value() {
+        return 0;
     }
 
     public String toString() {

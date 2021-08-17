@@ -8,26 +8,6 @@ public class King extends Piece {
     private static King whiteKing = new King(Color.WHITE);
     private static King blackKing = new King(Color.BLACK);
 
-    private static int[][] middleTable = {
-            {-30, -40, -40, -50, -50, -40, -40, -30},
-            {-30, -40, -40, -50, -50, -40, -40, -30},
-            {-30, -40, -40, -50, -50, -40, -40, -30},
-            {-30, -40, -40, -50, -50, -40, -40, -30},
-            {-20, -30, -30, -40, -40, -30, -30, -20},
-            {-10, -20, -20, -20, -20, -20, -20, -10},
-            {20, 20, 0, 0, 0, 0, 20, 20},
-            {20, 30, 10, 0, 0, 10, 30, 20}};
-
-    private static int[][] endTable = {
-            {-50, -40, -30, -20, -20, -30, -40, -50},
-            {-30, -20, -10, 0, 0, -10, -20, -30},
-            {-30, -10, 20, 30, 30, 20, -10, -30},
-            {-30, -10, 30, 40, 40, 30, -10, -30},
-            {-30, -10, 30, 40, 40, 30, -10, -30},
-            {-30, -10, 20, 30, 30, 20, -10, -30},
-            {-30, -30, 0, 0, 0, 0, -30, -30},
-            {-50, -30, -30, -30, -30, -30, -30, -50}};
-
     private King(Color color) {
         super(color);
     }
@@ -63,16 +43,8 @@ public class King extends Piece {
     }
 
     @Override
-    public int value(int x, int y, boolean midGame) {
-        if (this.color == Color.WHITE) {
-            if (midGame)
-                return 900 * middleTable[x][y];
-            return 900 * endTable[x][y];
-        } else {
-            if (midGame)
-                return 900 * middleTable[x][7 - y];
-            return 900 * endTable[x][7 - y];
-        }
+    public int value() {
+        return 0;
     }
 
 

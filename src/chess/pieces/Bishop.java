@@ -8,16 +8,6 @@ public class Bishop extends Piece {
     private static Bishop whiteBishop = new Bishop(Color.WHITE);
     private static Bishop blackBishop = new Bishop(Color.BLACK);
 
-    private static int[][] table = {
-            {-20, -10, -10, -10, -10, -10, -10, -20},
-            {-10, 0, 0, 0, 0, 0, 0, -10},
-            {-10, 0, 5, 10, 10, 5, 0, -10},
-            {-10, 5, 5, 10, 10, 5, 5, -10},
-            {-10, 0, 10, 10, 10, 10, 0, -10},
-            {-10, 10, 10, 10, 10, 10, 10, -10},
-            {-10, 5, 0, 0, 0, 0, 5, -10},
-            {-20, -10, -10, -10, -10, -10, -10, -20}};
-
     private Bishop(Color color) {
         super(color);
     }
@@ -45,10 +35,8 @@ public class Bishop extends Piece {
     }
 
     @Override
-    public int value(int x, int y, boolean midGame) {
-        if (this.color == Color.WHITE)
-            return 30 * table[x][y];
-        return 30 * table[x][7-y];
+    public int value() {
+        return 0;
     }
 
     public String toString() {
